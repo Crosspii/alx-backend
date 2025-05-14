@@ -33,7 +33,7 @@ class Server:
                 i: row for i, row in enumerate(dataset)
             }
         return self.__indexed_dataset
-    
+
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
         Get a deletion-resilient page of the dataset from starting index.
@@ -49,7 +49,7 @@ class Server:
         indexed_data = self.indexed_dataset()
         assert isinstance(index, int) and 0 <= index < len(self.dataset()), \
             "index must be a valid non-negative integer within range"
-        
+
         data = []
         current_index = index
 

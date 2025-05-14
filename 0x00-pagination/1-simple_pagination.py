@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-a simple server pagination module using a csv dataset
+Simple server pagination module using a csv dataset
 """
 
 import csv
@@ -43,7 +43,7 @@ class Server:
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
         return self.__dataset
-    
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
         Gets a specific page from the dataset
@@ -51,7 +51,7 @@ class Server:
         Args:
             page (int): Page number.
             page_size (int) : the number of items per page.
-        
+
         Returns:
             List[List]: a list of lists of rows for a specific page.
         """
@@ -59,7 +59,7 @@ class Server:
             "page must be a positive integer"
         assert isinstance(page_size, int) and page_size > 0, \
             "page_size must be a positive integer"
-        
+
         start, end = index_range(page, page_size)
         dataset = self.dataset()
 

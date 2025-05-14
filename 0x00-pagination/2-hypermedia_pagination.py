@@ -65,7 +65,7 @@ class Server:
         dataset = self.dataset()
 
         return dataset[start:end] if start < len(dataset) else []
-    
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """
         Get The Hypermedia-style pagination info
@@ -73,7 +73,7 @@ class Server:
         Args:
             page (int): the page number.
             page_size (int): number of itmes per page
-        
+
         Returns:
             dict: Hypermedia pagination data.
         """
