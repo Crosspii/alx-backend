@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ a basic caching module implementation class. """
-BaseCaching = __import__('base_caching.py').BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BaseCache(BaseCaching):
