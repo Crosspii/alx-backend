@@ -34,7 +34,7 @@ class FIFOCache(BaseCaching):
         """ Gets an item by key """
         with self.__rlock:
             return self.cache_data.get(key, None)
-        
+
     def _balance(self, keyIn):
         """
         Removes the oldets item from the cache if max size is full
@@ -48,4 +48,3 @@ class FIFOCache(BaseCaching):
                     self.cache_data.pop(KeyOut)
                 self.__keys.insert(keysLength, keyIn)
         return keyOut
-    

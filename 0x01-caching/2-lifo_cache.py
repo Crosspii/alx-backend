@@ -37,7 +37,7 @@ class LIFOCache(BaseCaching):
             return self.cache_data.get(key, None)
 
     def _balance(self, keyIn):
-        """ 
+        """
         Removes the earliest item from the cache.
         """
         keyOut = None

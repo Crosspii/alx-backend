@@ -39,7 +39,7 @@ class LRUCache(BaseCaching):
             if key in self.__keys:
                 self._balance(key)
         return value
-    
+
     def _balance(self, keyIn):
         """
         it removes the oldest item from the cache.
@@ -55,4 +55,3 @@ class LRUCache(BaseCaching):
                 self.__keys.remove(keyIn)
             self.__keys.insert(keysLength, keyIn)
         return keyOut
-
